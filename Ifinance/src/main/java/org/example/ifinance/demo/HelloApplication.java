@@ -313,9 +313,9 @@ public class HelloApplication extends Application {
             if(year == LocalDate.now().getYear() && month == LocalDate.now().getMonthValue()){
                 reportArea.getChildren().setAll(
                         new Label("Month: " + month + " " + year),
-                        new Label(String.format("Total Income: $%.2f", income)),
-                        new Label(String.format("Total Expense: $%.2f", expense)),
-                        new Label(String.format("Net Savings: $%.2f", savings))
+                        new Label(String.format("Total Income: ৳%.2f", income)),
+                        new Label(String.format("Total Expense: ৳%.2f", expense)),
+                        new Label(String.format("Net Savings: ৳%.2f", savings))
                 );
         }else{
             String query = "SELECT * FROM monthly_summery WHERE year = ? AND month = ?";
@@ -331,9 +331,9 @@ public class HelloApplication extends Application {
 
                     reportArea.getChildren().setAll(
                             new Label("Month: " + month + " " + year),
-                            new Label(String.format("Total Income: $%.2f", income)),
-                            new Label(String.format("Total Expense: $%.2f", expense)),
-                            new Label(String.format("Net Savings: $%.2f", savings))
+                            new Label(String.format("Total Income: ৳%.2f", income)),
+                            new Label(String.format("Total Expense: ৳%.2f", expense)),
+                            new Label(String.format("Net Savings: ৳%.2f", savings))
                     );
                 } else {
                     reportArea.getChildren().setAll(new Label("No data found for selected month."));
